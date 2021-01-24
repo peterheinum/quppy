@@ -60,9 +60,9 @@ const findTickers = pipe(
   filter(str => typeof str === 'string'),
   filter(string => 
     string.length < 6 &&
+    string.length > 2 &&
     string.match(/^[A-Za-z]+$/) &&
-    string === string.toUpperCase() && 
-    string.length !== 1
+    string === string.toUpperCase() 
   ),
   uniq
 ) 
